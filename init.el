@@ -4,6 +4,7 @@
 ;; Don't display the 'Welcome to GNU Emacs' buffer on startup
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
+(fset 'yes-or-no-p 'y-or-n-p)
 
 (scroll-bar-mode 0)
 (tool-bar-mode 0)

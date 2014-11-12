@@ -4,7 +4,7 @@
 
 (setq-default mode-line-format
 	      (list
-	       "    "
+	       " >> "
 	       ;; the buffer name; the file name as a tool tip
 	       '(:eval (propertize "%b " 'help-echo (buffer-file-name)))
        
@@ -27,11 +27,11 @@
 	       
 	       ;; was this buffer modified since the last save?
 	       '(:eval (when (buffer-modified-p)
-			 (concat ","  (propertize "Mod" 'help-echo "Buffer has been modified"))))
+			 (concat ", "  (propertize "Mod" 'help-echo "Buffer has been modified"))))
 	       
 	       ;; is this buffer read-only?
 	       '(:eval (when buffer-read-only
-			 (concat ","  (propertize "RO" 'help-echo "Buffer is read-only"))))
+			 (concat ", "  (propertize "RO" 'help-echo "Buffer is read-only"))))
 	       "] "
 	       ))
 
