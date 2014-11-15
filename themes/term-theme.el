@@ -1,9 +1,11 @@
 ;; Emacs theme for using terminal colors
 (deftheme term)
 
+;; Emacs throws an error for brightblack and brightwhite for some reason,
+;; I'm using the hex codes instead (brightwhite is not actually pure white).
 (let ((background "black")
       (selection "brightblack")
-      (foreground "brightwhite")
+      (foreground "#ffffff")
       (comment "white")
       (red "red")
       (green "green")

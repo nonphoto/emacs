@@ -1,13 +1,9 @@
-(defun display-startup-echo-area-message ()
-  "If it wasn't for this you'd be GNU/Spammed by now"
-  (message ""))
-
 (setq-default mode-line-format
 	      (list
 	       " >> "
 	       ;; the buffer name; the file name as a tool tip
 	       '(:eval (propertize "%b " 'help-echo (buffer-file-name)))
-       
+	       
 	       ;; line and column
 	       "(" ;; '%02' to set to 2 chars at least; prevents flickering
 	       (propertize "%02l") ","
@@ -34,4 +30,3 @@
 			 (concat ", "  (propertize "RO" 'help-echo "Buffer is read-only"))))
 	       "] "
 	       ))
-
