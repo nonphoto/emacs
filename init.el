@@ -11,6 +11,8 @@
 (menu-bar-mode 0)
 (fringe-mode 0)
 
+(pending-delete-mode t)
+
 (defun display-startup-echo-area-message ()
   "If it wasn't for this you'd be GNU/Spammed by now"
   (message ""))
@@ -24,6 +26,12 @@
 
 ;; Flyspell often slows down editing so it's turned off
 (remove-hook 'text-mode-hook 'turn-on-flyspell)
+
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+(setq ido-create-new-buffer 'always)
+(setq ido-decorations (quote ("\n    " "" "\n    " "\n    ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
 
 ;; User files 
 (defconst user-init-dir

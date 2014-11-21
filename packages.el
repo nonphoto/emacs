@@ -13,15 +13,9 @@
 
 (require 'use-package)
 
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(ido-mode 1)
-(setq ido-create-new-buffer 'always)
-(setq ido-decorations (quote ("\n    " "" "\n    " "\n    ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
-
 (use-package ace-jump-mode
   :ensure ace-jump-mode
-  :bind ("C-." . ace-jump-mode))
+  :bind ("C-c j" . ace-jump-mode))
 
 (use-package smex
   :ensure smex
@@ -30,5 +24,24 @@
 	 ("C-c C-c M-x" . execute-extended-command))
   :init (progn
 	  (smex-initialize)))
-		 
-	  
+
+(use-package paredit
+  :ensure paredit
+  :bind(("C-c p". paredit-mode)))
+
+(use-package aggressive-indent
+  :ensure aggressive-indent
+  :init (progn
+	  (global-aggressive-indent-mode)))
+
+(use-package hungry-delete
+  :ensure hungry-delete
+  :init (progn
+	  (global-hungry-delete-mode)))
+
+(use-package expand-region
+  :ensure expand-region
+  :bind (("M-SPC" . er/expand-region)))
+
+(use-package multiple-cursors
+  :ensure multiple-cursors)

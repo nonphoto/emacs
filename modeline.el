@@ -1,6 +1,6 @@
 (setq-default mode-line-format
 	      (list
-	       " >> "
+	       " -- "
 	       ;; the buffer name; the file name as a tool tip
 	       '(:eval (propertize "%b " 'help-echo (buffer-file-name)))
 	       
