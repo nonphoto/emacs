@@ -8,3 +8,5 @@
 		(lambda ()
 		  (interactive)
 		  (join-line -1)))
+
+(global-set-key (kbd "C-c i") 'ido-goto-symbol-push-mark)
