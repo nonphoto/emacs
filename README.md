@@ -1,4 +1,4 @@
 emacs
 =====
 
-My personal GNU Emacs configuration files.
+Old Emacs config files. Checkout my [dotfiles](https://github.com/nonphoto/dotfiles) instead.
